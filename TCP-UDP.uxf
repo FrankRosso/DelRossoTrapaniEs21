@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>740</y>
+      <w>390</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Tessera
+--
+- int id;
+- boolean valida;
+- LocalDateTime aperturaRecente;
+--
++Tessera(int id)
++ int getId()
++ void setId(int d)
++ boolean isValida()
++ void setValida(boolean valida)
++ LocalDateTime getAperturaRecente()
++ void setAperturaRecente(LocalDateTime aperturaRecente)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>230</y>
+      <w>390</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ServerEsercizio21 
+--
++ ServerEsercizio21(int port) throws SocketException
++ int[] leggiVoti()
++ int salvaVoti() throws IOException
++ double votoMedio(int codice) throws FileNotFoundException, IOException
++ void run()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>420</y>
+      <w>360</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Client20
+--
+- Socket soket
+- DataInputStream in
+- DataOutputStream out
+--
++ Client20() throws IOException
++ void inviaScelta(int scelta) throws IOException
++ void inviaRicevi(int scelta, int id) throws IOException
++ void riceviId() throws IOException
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>580</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Server20
+--
+- ServerSocket server
+- ArrayList &lt;Tessera&gt; registrate 
+--
++Server20() throws IOException
++ void run()
++ int apri(int id)
++ int elimina(int id) 
++ void main(String[] args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>50</y>
+      <w>390</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>ClientEsercizio21
+--
+- DatagramSocket socket;
+- String IP_Address;
+- int UDP_port;
+--
++ Esercizio21(String host, int port) throws SocketException
++ void close_socket()
++ void inviaScelta(int scelta)
++ int inviaVoti(int[] voti) throws IOException
++ double richiediVotoMedio(int numero) throws IOException</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
